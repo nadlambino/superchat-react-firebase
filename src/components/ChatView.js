@@ -6,7 +6,7 @@ export default function ChatView() {
 	const [messages, setMessages] = useState([]);
 
 	const getMessages = async () => {
-		const messageQuery = query(collection(db, 'message'));
+		const messageQuery = query(collection(db, 'messages'));
 		const messageSnapShot = await getDocs(messageQuery);
 		const data = [];
 		messageSnapShot.forEach((doc) => {

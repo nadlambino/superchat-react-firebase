@@ -7,7 +7,7 @@ export default function ChatForm() {
 
 	const handleFormSubmit = async (event) => {
 		event.preventDefault();
-		await addDoc(collection(db, 'message'), {
+		await addDoc(collection(db, 'messages'), {
 			message: chat,
 			createdAt: Timestamp.now(),
 		});
