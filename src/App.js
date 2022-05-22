@@ -1,7 +1,7 @@
 import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import { useState } from 'react';
-import './styles/App.css';
+import './styles/app.css';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import ChatView from './components/ChatView';
@@ -32,7 +32,7 @@ function App() {
 	const isUserSignedIn = () => Object.keys(user).length;
 
 	return (
-		<div className='App'>
+		<div className='app'>
 			{isUserSignedIn() === 0 ? (
 				<SignIn handleSignIn={handleSignIn} />
 			) : (

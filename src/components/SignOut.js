@@ -1,6 +1,6 @@
 export default function SignOut({ handleSignOut }) {
 	return (
-		<div>
+		<div className='auth-container'>
 			<button onClick={handleSignOut}>Sign Out</button>
 		</div>
 	);

@@ -19,13 +19,11 @@ export default function ChatForm() {
 	};
 
 	return (
-		<div>
-			<div>
-				<form onSubmit={handleFormSubmit}>
-					<input value={chat} onChange={handleFormChange} />
-					<button type='submit'>Send</button>
-				</form>
-			</div>
+		<div className='chat-form-container'>
+			<form onSubmit={handleFormSubmit}>
+				<input value={chat} onChange={handleFormChange} />
+				<button type='submit'>Send</button>
+			</form>
 		</div>
 	);
 }

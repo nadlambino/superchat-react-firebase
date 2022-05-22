@@ -1,6 +1,6 @@
 export default function SignIn({ handleSignIn }) {
 	return (
-		<div>
+		<div className='auth-container'>
 			<button onClick={handleSignIn}>Sign In with Google</button>
 		</div>
 	);

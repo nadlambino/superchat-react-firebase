@@ -23,7 +23,7 @@ export default function ChatView() {
 	});
 
 	return (
-		<div className='view'>
+		<div className='view-container'>
 			{messages.map((message) => (
 				<div key={message.id}>
 					<p>{message.message}</p>
