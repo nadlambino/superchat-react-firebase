@@ -1,11 +1,10 @@
+import './styles/app.css';
 import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import { useState } from 'react';
-import './styles/app.css';
-import SignIn from './components/SignIn';
-import SignOut from './components/SignOut';
 import ChatView from './components/ChatView';
 import ChatForm from './components/ChatForm';
+import AuthButton from './components/AuthButton';
 
 function App() {
 	const [user, setUser] = useState({});
@@ -18,7 +17,6 @@ function App() {
 				setUser(user);
 			})
 			.catch((error) => {
-				const errorMessage = error.message;
 				setUser({});
 			});
 	};
@@ -34,13 +32,13 @@ function App() {
 	return (
 		<div className='app'>
 			{isUserSignedIn() === 0 ? (
-				<SignIn handleSignIn={handleSignIn} />
+				<AuthButton text="Enter Chat" handleAuth={handleSignIn} />
 			) : (
-				<div>
-					<SignOut handleSignOut={handleSignOut} />
+				<>
+					<AuthButton text="Leave Chat" handleAuth={handleSignOut} />
 					<ChatView />
 					<ChatForm />
-				</div>
+				</>
 			)}
 		</div>
 	);
