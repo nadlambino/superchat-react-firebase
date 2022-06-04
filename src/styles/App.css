@@ -1,13 +1,16 @@
 :root {
-	--blue-color-1: #0061a8;
-	--blue-color-2: #2978b5;
-	--blue-color-3: #8ab6d6;
-	--cream-color-1: #fbe0c4;
+	--blue-1: #38a9f5;
+	--blue-2: #3094d6;
+	--white-1: #ffffff;
+	--yellow-1: #fcf5e0;
+	--gray-1: rgb(216, 216, 216);
 }
 
 html,
 * {
 	box-sizing: border-box;
+	font-size: 1rem;
+	letter-spacing: 0.02rem;
 }
 
 body {
@@ -16,26 +19,57 @@ body {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	margin: 0;
+	background-color: var(--yellow-1);
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 .app {
-	text-align: center;
 	width: 400px;
-	height: 500px;
-	margin: auto;
-	border: 1px solid var(--blue-color-1);
+	height: 600px;
+    text-align: center;
+    margin: 10px auto;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: var(--white-1);
+	box-shadow: 3px 3px 4px 0px rgba(212,212,212,1);
+	-webkit-box-shadow: 3px 3px 4px 0px rgba(212,212,212,1);
+	-moz-box-shadow: 3px 3px 4px 0px rgba(212,212,212,1);
 }
 
-.auth-container,
-.chat-form-container {
+.auth-btn {
+	background-color: var(--blue-2);
+	padding: 10px 10px;
+	border: 1px solid var(--blue-2);
+	border-radius: 3px;
+	color: var(--white-1);
+	text-align: center;
 	width: 100%;
-	background-color: var(--blue-color-1);
-	height: 45px;
+}
+
+.auth-btn:hover {
+	background-color: var(--blue-1);
+	cursor: pointer;
 }
 
 .view-container {
-	height: 400px;
-	margin: 5px;
-	border: 1px solid var(--blue-color-1);
-	background-color: var(--cream-color-1);
+    height: 450px;
+	margin: 10px auto;
+	border-top: 1px solid var(--gray-1);
+    overflow-y: scroll;
+}
+
+.message-container {
+	margin: 10px auto;
+}
+
+.message-container p {
+	padding: 5px;
+	width: 70%;
+	background-color: #3094d6;
+	border-radius: 5px;
 }
