@@ -32,13 +32,16 @@ function App() {
 	return (
 		<div className='app'>
 			{isUserSignedIn() === 0 ? (
-				<AuthButton text="Enter Chat" handleAuth={handleSignIn} />
+				<AuthButton text='Enter Chat Room' handleAuth={handleSignIn} />
 			) : (
-				<>
-					<AuthButton text="Leave Chat" handleAuth={handleSignOut} />
+				<div className='chat-app'>
+					<AuthButton
+						text='Leave Chat Room'
+						handleAuth={handleSignOut}
+					/>
 					<ChatView />
 					<ChatForm />
-				</>
+				</div>
 			)}
 		</div>
 	);
